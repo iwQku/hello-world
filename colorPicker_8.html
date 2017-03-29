@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+	<meta charset="utf-8" />
+	<title>Color picker</title>
+	
+	<style>
+	
+	body{
+		font-family: Verdana, Arial, sans-serif;		
+	}
+	
+	#color-picker{
+		margin: 30px;
+	}
+	
+	ul {
+		list-style-type: none;
+	}
+	
+	aside {
+		float: left;
+		width: 300px;
+		overflow-y: scroll;
+		height: 550px;
+		background-color: #ddd;
+	}
+	
+	</style>
+	
+	<script>
+	
+	function setBgColor() {
+		
+		var color = document.getElementById('color-picker').value;
+		document.body.style.backgroundColor = color;
+		
+		var myul = document.getElementById("rList");
+		var myli = document.createElement("li");
+		
+		var mylink = document.createElement("a");
+		var mytxt = document.createTextNode(color);
+		
+		myul.appendChild(myli);
+		myli.appendChild(mytxt);
+		myli.style.color = color;
+	}
+	
+	</script>
+</head>
+
+<body>
+	
+	<div>
+		<input id="color-picker" value="#aaaaaa" onchange="setBgColor()" type="color">
+		Pick a color 
+	</div>
+	
+	<aside>
+		<ul id="rList">
+		</ul>
+	</aside>
+	
+</body>
+</html>
