@@ -8,49 +8,9 @@
 	<meta charset="utf-8" />
 	<title>Color picker</title>
 	
-	<style>
+	<link rel="stylesheet" href="style.css">	
+	<script src="functions.js"></script>
 	
-	body{
-		font-family: Verdana, Arial, sans-serif;		
-	}
-	
-	#color-picker{
-		margin: 30px;
-	}
-	
-	ul {
-		list-style-type: none;
-	}
-	
-	aside {
-		float: left;
-		width: 300px;
-		overflow-y: scroll;
-		height: 550px;
-		background-color: #ddd;
-	}
-	
-	</style>
-	
-	<script>
-	
-	function setBgColor() {
-		
-		var color = document.getElementById('color-picker').value;
-		document.body.style.backgroundColor = color;
-		
-		var myul = document.getElementById("rList");
-		var myli = document.createElement("li");
-		
-		var mylink = document.createElement("a");
-		var mytxt = document.createTextNode(color);
-		
-		myul.appendChild(myli);
-		myli.appendChild(mytxt);
-		myli.style.color = color;
-	}
-	
-	</script>
 </head>
 
 <body>
